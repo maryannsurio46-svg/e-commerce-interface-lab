@@ -1,0 +1,59 @@
+
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-light: #f9f9f9;
+            --text-main: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .empty-message {
+            color: #777;
+            font-size: 18px;
+        }
+
+        .subtotal {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .checkout-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 18px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .checkout-btn:hover {
+            opacity: 0.9;
+        }
+
+        .disabled {
+            background-color: gray;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+

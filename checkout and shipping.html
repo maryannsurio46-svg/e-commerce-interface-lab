@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout and shipping.css">
+    <title>Checkout - Coffee Shop</title>
+</head>
+<body>
+    <button style="color: black; background-color: white; text-align: left;" onclick="history.back()"><</button>
+    <h1>Checkout & Shipping</h1>
+
+    <div class="container">
+
+        <div class="form-section">
+
+            <h2>Shipping Information</h2>
+
+            <form>
+
+                <fieldset>
+                    <legend>Shipping Address</legend>
+
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="street">Street Address:</label><br>
+                    <input type="text" id="street" name="street"><br><br>
+
+                    <label for="zip">Zip Code:</label><br>
+                    <input type="text" id="zip" name="zip"><br><br>
+                </fieldset>
+
+                <div class="payment-method">
+                    <h2>Payment Details</h2>
+
+                    <p>Select Payment Method:</p>
+
+                    <input type="radio" id="gcash" name="payment" value="Gcash">
+                    <label for="gcash">Gcash</label><br><br>
+
+                    <input type="radio" id="cash" name="payment" value="Cash-on-Delivery">
+                    <label for="cash">Cash on Delivery</label><br><br>
+                </div>
+
+            </form>
+            <button onclick="location.href='account.html'">Place Order</button>
+
+        </div>
+
+        <aside>
+            <h2>Order Summary</h2>
+            <p>Items Total: ₱00.0</p>
+            <p>Shipping Fee: ₱00.0</p>
+            <hr>
+            <h3>Final Total: ₱00.0</h3>
+        </aside>
+
+    </div>
+
+</body>
+</html>
