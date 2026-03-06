@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Coffee Product Detail</title>
@@ -8,62 +9,98 @@
 </head>
 
 <body>
-    <button style="color: black; background-color: white; text-align: left;" onclick="history.back()"><</button>
-    <h1>Iced Latte</h1>
-    <p>An iced latte is a cold coffee beverage made by combining shots of espresso with cold milk and ice, typically served in a tall glass. Unlike iced coffee, which uses brewed coffee, an iced latte relies on espresso for a smoother, creamier, and less acidic taste. It is often sweetened with syrups and is a popular, refreshing alternative to hot coffee. </p>
+<button class="back-btn" onclick="history.back()"><</button>
 
-    <h2>Product Details</h2>
-    <table>
-        <tr>
-            <th>Feature</th>
-            <th>Details</th>
-        </tr>
-        <tr>
-            <td>Size</td>
-            <td>16 oz (Medium) , 32 oz (Large)</td>
-        </tr>
-        <tr>
-            <td>Ingredients</td>
-            <td>Espresso, Milk, Caramel Syrup</td>
-        </tr>
-        <tr>
-            <td>Serving</td>
-            <td>Iced</td>
-        </tr>
-        <tr>
-            <td>Price</td>
-            <td>₱125</td>
-        </tr>
-    </table>
+<main>
 
-    <form>
-        <label for="quantity">Quantity:</label>
-        <input id="quantity" type="number" min="1" value="1">
-        <label for="size">Size:</label>
-        <input id="size" type="text" placeholder="Enter Size">
-        <br><br>   
-    </form>
-        <button onclick="location.href='shopping cart.html'">Add to Cart</button>
-        <button onclick="location.href='checkout and shipping.html'">Checkout</button>
+<h1>Iced Latte</h1>
 
-    <section>
-        <h2>Customer Reviews</h2>
+<img src="icedlatte.jpg" alt="Iced Latte">
 
-        <article>
-            <h4>Ana</h4>
-            <blockquote>
-                The Iced latte flavor is perfect and not too sweet. Love it!
-            </blockquote>
-        </article>
+<p>
+An iced latte is a cold coffee beverage made by combining shots of espresso with cold milk and ice,
+typically served in a tall glass. Unlike iced coffee, which uses brewed coffee, an iced latte relies
+on espresso for a smoother, creamier, and less acidic taste.
+</p>
 
-        <article>
-            <h4>Mark</h4>
-            <blockquote>
-                Smooth coffee and great aroma. Will order again!
-            </blockquote>
-        </article>
 
-    </section>
+<h2>Product Details</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+<th>Feature</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Size</td>
+<td>16 oz (Medium), 32 oz (Large)</td>
+</tr>
+
+<tr>
+<td>Ingredients</td>
+<td>Espresso, Milk, Caramel Syrup</td>
+</tr>
+
+<tr>
+<td>Serving</td>
+<td>Iced</td>
+</tr>
+
+<tr>
+<td>Price</td>
+<td>₱125</td>
+</tr>
+
+</table>
+
+</div>
+
+
+<form class="product-form">
+
+<label for="quantity">Quantity:</label>
+<input id="quantity" type="number" min="1" value="1">
+
+<label for="size">Size:</label>
+<input id="size" type="text" placeholder="Enter Size">
+
+</form>
+
+
+<div class="buttons">
+
+<button onclick="location.href='shopping cart.html'">Add to Cart</button>
+
+<button onclick="location.href='checkout and shipping.html'">Checkout</button>
+
+</div>
+
+
+<section class="reviews">
+
+<h2>Customer Reviews</h2>
+
+<article>
+<h4>Ana</h4>
+<blockquote>
+The Iced latte flavor is perfect and not too sweet. Love it!
+</blockquote>
+</article>
+
+<article>
+<h4>Mark</h4>
+<blockquote>
+Smooth coffee and great aroma. Will order again!
+</blockquote>
+</article>
+
+</section>
+
+</main>
 
 </body>
 </html>

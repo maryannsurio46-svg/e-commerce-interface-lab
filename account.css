@@ -72,5 +72,63 @@
         li:hover {
             color: var(--accent-color);
         }
+        @media (min-width:481px){
+
+    .product-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+        @media (min-width: 769px) {
+            .checkout-container {
+                flex-direction: row;
+            }
+            .checkout-container fieldset {
+                flex: 2;
+            }
+            .checkout-container aside {
+                flex: 1;
+            }
+        }
+        @media (min-width:769px){
+
+    .container{
+        flex-direction:row;
+    }
+
+    .product-grid{
+        grid-template-columns: repeat(4, minmax(200px,1fr));
+    }
+
+}
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.product-card{
+    animation: fadeIn 0.6s ease forwards;
+}
+@keyframes pulse{
+
+    0%{transform:scale(1);}
+    50%{transform:scale(1.05);}
+    100%{transform:scale(1);}
+
+}
+
+button:hover{
+    animation:pulse 0.5s ease;
+}
 
 
