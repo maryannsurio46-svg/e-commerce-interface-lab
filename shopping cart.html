@@ -8,14 +8,24 @@
 </head>
 
 <body>
+    <header class="main-header">
+    <h1>Hi! Mary</h1>
+    <nav>
+        <ul>
+            <li><a href="products.html">Home</a></li>
+            <li><a href="shopping cart.html">Cart</a></li>
+            <li><a href="account.html">Account</a></li>
+        </ul>
+    </nav>
+</header>
 
 <main>
-    <button style="color: black; background-color: white; text-align: left;" onclick="history.back()"><</button>
     <h2>Your Shopping Cart</h2>
 
-    <section class="cart">
-        <p class="empty-message"><strong>Your cart is currently empty.</strong></p>
-    </section>
+   <section class="cart">
+    <p class="empty-message"><strong>Your cart is currently empty.</strong></p>
+    <ul id="cart-list"></ul>
+</section>
 
     <section class="summary">
         <p class="subtotal">Subtotal: ₱0.00</p>
@@ -27,3 +37,5 @@
 </main>
 </body>
 </html>
+
+<script src="script.js"></script>

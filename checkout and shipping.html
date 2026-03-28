@@ -15,36 +15,38 @@
 
         <div class="form-section">
 
-            <h2>Shipping Information</h2>
+           <form id="checkout-form">
 
-            <form>
+    <fieldset>
+        <legend>Shipping Address</legend>
 
-                <fieldset>
-                    <legend>Shipping Address</legend>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name"><br>
+        <small class="error-msg"></small><br>
 
-                    <label for="name">Full Name:</label><br>
-                    <input type="text" id="name" name="name"><br><br>
+        <label for="street">Street Address:</label><br>
+        <input type="text" id="street"><br>
+        <small class="error-msg"></small><br>
 
-                    <label for="street">Street Address:</label><br>
-                    <input type="text" id="street" name="street"><br><br>
+        <label for="zip">Zip Code:</label><br>
+        <input type="text" id="zip"><br>
+        <small class="error-msg"></small><br>
+    </fieldset>
 
-                    <label for="zip">Zip Code:</label><br>
-                    <input type="text" id="zip" name="zip"><br><br>
-                </fieldset>
+    <div class="payment-method">
+        <h2>Payment Details</h2>
 
-                <div class="payment-method">
-                    <h2>Payment Details</h2>
+        <input type="radio" id="gcash" name="payment" value="Gcash">
+        <label for="gcash">Gcash</label><br>
 
-                    <p>Select Payment Method:</p>
+        <input type="radio" id="cash" name="payment" value="Cash">
+        <label for="cash">Cash on Delivery</label><br>
 
-                    <input type="radio" id="gcash" name="payment" value="Gcash">
-                    <label for="gcash">Gcash</label><br><br>
+        <small id="payment-error" class="error-msg"></small>
+    </div>
 
-                    <input type="radio" id="cash" name="payment" value="Cash-on-Delivery">
-                    <label for="cash">Cash on Delivery</label><br><br>
-                </div>
-
-            </form>
+    <br>
+    <button type="submit
             <button onclick="location.href='account.html'">Place Order</button>
 
         </div>
@@ -61,3 +63,5 @@
 
 </body>
 </html>
+
+<script src="script.js"></script>

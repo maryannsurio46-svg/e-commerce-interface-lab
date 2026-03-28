@@ -5,29 +5,116 @@
     <title>My Account - Coffee Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="account.css">
+    <style>
+        details {
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            padding: 0.5em;
+            border-radius: 5px;
+        }
+        summary {
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .order-item {
+            margin-left: 1em;
+        }
+    </style>
 </head>
-
 <body>
-    <button style="color: black; background-color: white; text-align: left;" onclick="history.back()"><</button>
-    <header>
-        <h1>Welcome, Mary!</h1>
-
+    <header class="main-header">
+        <h1 id="greeting">Hi!</h1>
         <nav>
+            <ul>
+                <li><a href="products.html">Home</a></li>
+                <li><a href="shopping cart.html">Cart</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="account-header">
+        <h2 id="welcomeMessage">Welcome!</h2>
+
+        <nav class="account-nav">
             <a href="#">Order History</a>
             <a href="#">Profile Settings</a>
             <a href="#">Wishlist</a>
         </nav>
-    </header>
-
-    <section>
-        <h2>Previous Orders</h2>
-
-        <ul>
-            <li>Order #1001 – January 10, 2026 – ₱280</li>
-            <li>Order #1002 – January 18, 2026 – ₱120</li>
-            <li>Order #1003 – February 2, 2026 – ₱310</li>
-        </ul>
     </section>
 
+    <section id="ordersSection">
+        <h2>Previous Orders</h2>
+        <!-- Order details will be injected here dynamically -->
+    </section>
+
+    <script>
+        // ============================
+        // 1. Mock User Data
+        // ============================
+        const currentUser = {
+            name: "Mary",
+            orderHistory: [
+                {
+                    id: 1001,
+                    date: "January 10, 2026",
+                    total: 280,
+                    items: [
+                        { name: "Macchiato", quantity: 2, price: 100 },
+                        { name: "Espresso", quantity: 1, price: 80 }
+                    ]
+                },
+                {
+                    id: 1002,
+                    date: "January 18, 2026",
+                    total: 120,
+                    items: [
+                        { name: "Cappuccino", quantity: 1, price: 120 }
+                    ]
+                },
+                {
+                    id: 1003,
+                    date: "February 2, 2026",
+                    total: 310,
+                    items: [
+                        { name: "Mocha", quantity: 2, price: 130 },
+                        { name: "Americano", quantity: 1, price: 50 }
+                    ]
+                }
+            ]
+        };
+
+        // ============================
+        // 2. Dynamic Greeting
+        // ============================
+        document.getElementById("greeting").textContent = `Hi, ${currentUser.name}!`;
+        document.getElementById("welcomeMessage").textContent = `Welcome, ${currentUser.name}!`;
+
+        // ============================
+        // 3. Expanding Orders
+        // ============================
+        const ordersSection = document.getElementById("ordersSection");
+
+        currentUser.orderHistory.forEach(order => {
+            const details = document.createElement("details");
+            const summary = document.createElement("summary");
+            summary.textContent = `Order #${order.id} – ${order.date} – ₱${order.total}`;
+            details.appendChild(summary);
+
+            const itemsList = document.createElement("ul");
+
+            order.items.forEach(item => {
+                const li = document.createElement("li");
+                li.classList.add("order-item");
+                li.textContent = `${item.quantity} x ${item.name} – ₱${item.price}`;
+                itemsList.appendChild(li);
+            });
+
+            details.appendChild(itemsList);
+            ordersSection.appendChild(details);
+
+            // Optional: expand/collapse logic handled by <details> automatically
+        });
+    </script>
 </body>
 </html>
